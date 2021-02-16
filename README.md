@@ -6,7 +6,7 @@ A website that offers fitness training services.
 ## Built With
 * HTML
 * CSS
-## Website
+## Deployed Website
 https://kjmckinley.github.io/run-buddy/
 
 ## Contribution
