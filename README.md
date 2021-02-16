@@ -11,3 +11,5 @@ https://kjmckinley.github.io/run-buddy/
 
 ## Contribution
 Made with ❤️ by Kyle McKinley
+
+### ©️2019 Run Buddy, Inc
