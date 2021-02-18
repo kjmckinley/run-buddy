@@ -20,6 +20,14 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
 }
 
 header h1 {
@@ -51,10 +59,18 @@ header nav ul {
 }
 
 header nav ul li a {
-    padding: 10px 15px
+    padding: 10px 15px;
     font-weight: lighter;
     /* vw changes size relative to the width of the screen */
     font-size: 1.55vw;
+}
+
+ /* hover effects */
+ header nav ul li a:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
 }
 
 /* Apply Style Values to the Property Called <footer> */
@@ -101,26 +117,32 @@ section {
     font-style: italic;
     font-size: 55px;
     color: #fce138;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Hero Styling */
 .hero {
     background-image: url("../images/hero-bg.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: 80%;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items:flex-start;
 }
+
+/* sign up form */
 .hero-form {
     color: #024e76;
-    background-color: #fce138;
+    background-color: rgba(252, 225, 56, 0.8);
     padding: 20px;
     width: 40%;
     margin: 3.5%;
     /* shorthand for border-style, width and color */
     border: solid 3px #024e76;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
 }
 
 .hero-form button {
@@ -130,6 +152,12 @@ section {
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    border-radius: 10px;
+}
+
+/* hover effect */
+.hero-form button:hover {
+    background-color: #39a6b2;
 }
 
 .hero-form h3 {
@@ -149,6 +177,15 @@ section {
     color: #024e76;
     width: 100%;
     margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
+}
+
+/* highlights the text field when the user clicks into it */
+.form-input:focus {
+    background-color: rgba(255,255,255, 1);
+    /* removes box that appears when text box is clicked */
+    outline: none;
 }
 
 .hero-form label {
@@ -195,10 +232,15 @@ section {
       margin: 50px auto;
       padding-bottom: 50px;
       width: 80%;
-      border-bottom: 1px solid #39a6b2;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      border-bottom: 1px solid #39a6b2;
+  }
+
+  /* makes bottom-border appear only at ever line except the end */
+  .step:last-child {
+    border-bottom: none;
   }
 
   .step h3 {
@@ -330,7 +372,7 @@ section {
     color: #fce138;
   }
 
-  .contact-form input, .contact-form textarea {
+  .contact-form input, .contact-form input {
       border: 1px solid #024e76;
       display: block;
       padding: 7px 15px;
@@ -339,6 +381,15 @@ section {
       width: 100%;
       margin-bottom: 15px;
       margin-top: 5px;
+      border-radius: 10px;
+      /* transparent coloring in the text box */
+      background-color: rgba(255,255,255, 0.75);
+  }
+
+  /* focus feature to hilight the text area when the user presses it */
+  .contact-form:focus, .contact-form input:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
   }
 
   .contact-form button {
@@ -349,17 +400,28 @@ section {
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
+    border-radius: 10px;
   }
+
+  .contact-form button:hover {
+      color: #fce138;
+      background: #39a6b2;
+  }
+
+
+
 
   /* media query for smaller DESKTOP screens */
 @media screen and (max-width:980px) {
     header {
         padding-bottom: 0;
         justify-content: center;
+        position: relative;
     }
 
     header h1 {
         width: 100%;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 
     header nav ul {
@@ -370,6 +432,7 @@ section {
 
     header nav ul li a {
         font-size: 20px;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 
     footer h2, footer div {
