@@ -16,13 +16,13 @@
 
 /* Changes the <body> Property' Value for Styling Purposes */
 body {
-    color: #39a6b2;
+    color: var(--tertiary-color);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Apply Style Values to the Property Called <header> */
 header {
-    background-color: #39a6b2;
+    background-color: var(--tertiary-color);
     /* added flex value to header to resize depending on the screen */
     display: flex;
     justify-content: space-between;
